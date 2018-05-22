@@ -39,9 +39,13 @@ export default class HelloWorldSceneAR extends Component {
           <ViroPortalScene passable={true} dragType="FixedDistance" >
             <ViroPortal position={[0, 0, -1]} scale={[0.1, 0.1, 0.1]}>
 
-              <Viro3DObject source={require('./portal_res/earth/earth.obj')}
-                resources={[require('./portal_res/earth/Earth_Diffuse.jpg'),
-                            require('./portal_res/earth/EarthAna.jpg')]}
+              <Viro3DObject source={require('../../AR_objects/HeartFinal/heart.obj')}
+                resources={[require('../../AR_objects/HeartFinal/heartAna.jpg'),
+                            require('../../AR_objects/HeartFinal/CorazonJamon2.jpg'),
+                          require('../../AR_objects/HeartFinal/Corazon_b02.jpg'),
+                        require('../../AR_objects/HeartFinal/Auriculas_b.jpg'),
+                      require('../../AR_objects/HeartFinal/Auricula_izq.jpg'),
+                    require('../../AR_objects/HeartFinal/Auricula_der.jpg')]}
                     type="OBJ"/>
 
             </ViroPortal>
@@ -53,7 +57,7 @@ export default class HelloWorldSceneAR extends Component {
   _onInitialized(state, reason) {
     if (state == ViroConstants.TRACKING_NORMAL) {
       this.setState({
-        text : "Weclome To Portal"
+        text : "HEY RBK!"
       });
     } else if (state == ViroConstants.TRACKING_NONE) {
       // Handle loss of tracking

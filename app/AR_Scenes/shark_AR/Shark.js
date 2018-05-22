@@ -36,18 +36,13 @@ export default class HelloWorldSceneAR extends Component {
     <ViroARScene>
       <ViroARPlaneSelector />
         <ViroAmbientLight color="#ffffff" intensity={200}/>
-          <ViroPortalScene passable={true} dragType="FixedDistance" >
+          <ViroPortalScene passable={true} dragType="FixedToWorld" >
             <ViroPortal position={[0, 0, -1]} scale={[0.1, 0.1, 0.1]}>
 
-              <Viro3DObject source={require('./portal_res/Trex/trex.obj')}
-                resources={[
-                            require('./portal_res/Trex/muscleguide.jpg'),
-                            require('./portal_res/Trex/TrexBump012714.jpg'),
-                            require('./portal_res/Trex/TrexColor01152015.jpg'),
-                            require('./portal_res/Trex/TrexEyeColor.jpg'),
-                            require('./portal_res/Trex/TrexSpec.png'),
-                            require('./portal_res/Trex/TrexTooth.png'),
-                            require('./portal_res/Trex/trexSkul.jpg')]}
+              <Viro3DObject source={require('../../AR_objects/Shark/Shark.obj')}
+                resources={[require('../../AR_objects/Shark/greatwhiteanatomy.jpg'),
+                            require('../../AR_objects/Shark/SharlAnatomy3.jpg'),
+                            require('../../AR_objects/Shark/GreatWhiteDiffuse.png')]}
                     type="OBJ"/>
 
             </ViroPortal>

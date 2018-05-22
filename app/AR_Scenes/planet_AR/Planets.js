@@ -16,6 +16,7 @@ import {
   ViroPortalScene,
   Viro3DObject,
   ViroARPlaneSelector,
+  ViroAnimations
 } from 'react-viro';
 
 export default class HelloWorldSceneAR extends Component {
@@ -39,13 +40,12 @@ export default class HelloWorldSceneAR extends Component {
           <ViroPortalScene passable={true} dragType="FixedDistance" >
             <ViroPortal position={[0, 0, -1]} scale={[0.1, 0.1, 0.1]}>
 
-              <Viro3DObject source={require('./portal_res/HeartFinal/heart.obj')}
-                resources={[require('./portal_res/HeartFinal/heartAna.jpg'),
-                            require('./portal_res/HeartFinal/CorazonJamon2.jpg'),
-                          require('./portal_res/HeartFinal/Corazon_b02.jpg'),
-                        require('./portal_res/HeartFinal/Auriculas_b.jpg'),
-                      require('./portal_res/HeartFinal/Auricula_izq.jpg'),
-                    require('./portal_res/HeartFinal/Auricula_der.jpg')]}
+              <Viro3DObject source={require('../../AR_objects/earth/earth.obj')}
+                resources={[require('../../AR_objects/earth/Earth_Diffuse.jpg'),
+                            require('../../AR_objects/earth/EarthAna.jpg')]}
+                animation={{name:'loopRotate',
+                            run:true,
+                          loop:true}}
                     type="OBJ"/>
 
             </ViroPortal>
@@ -57,7 +57,7 @@ export default class HelloWorldSceneAR extends Component {
   _onInitialized(state, reason) {
     if (state == ViroConstants.TRACKING_NORMAL) {
       this.setState({
-        text : "HEY RBK!"
+        text : "Weclome To Portal"
       });
     } else if (state == ViroConstants.TRACKING_NONE) {
       // Handle loss of tracking
@@ -74,7 +74,9 @@ var styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-
+ViroAnimations.registerAnimations({
+  loopRotate:{properties:{rotateY:"+=45"}, duration:1000},
+});
 
 
 module.exports = HelloWorldSceneAR;
