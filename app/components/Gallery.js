@@ -23,24 +23,33 @@ import {
 import {Actions} from 'react-native-router-flux';
 
 export default class Gallery extends Component {
-  planet (){
-    Actions.planet()
+  vrplanet (){
+    Actions.vrplanet()
   }
-  heart (){
-    Actions.heart()
+  vrheart (){
+    Actions.vrheart()
   }
-  shark (){
-    Actions.shark()
+  vrshark (){
+    Actions.vrshark()
   }
-  dino (){
-    Actions.dino()
+  vrdino (){
+    Actions.vrdino()
   }
-  skeleton (){
-    Actions.skeleton()
+  vrskeleton (){
+    Actions.vrskeleton()
   }
-  test(){
-    Actions.test()
-  }
+arshark(){
+  Actions.arshark()
+}
+arplanet(){
+  Actions.arplanet()
+}
+arheart(){
+  Actions.arheart()
+}
+ardino(){
+  Actions.ardino()
+}
   render() {
     return (
       <ScrollView style={styles.Container}>
@@ -58,6 +67,7 @@ export default class Gallery extends Component {
             A collection of eight planets and their moons in orbit round the sun, together with smaller bodies in the form of asteroids, meteoroids, and comets.
           </Text>
           <Button
+            onPress={this.arplanet}
             icon={<Icon name='code' color='#ffffff' />}
             backgroundColor='#03A9F4'
             buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -66,6 +76,7 @@ export default class Gallery extends Component {
             <Text></Text>
 
             <Button
+              onPress = {this.vrplanet}
               icon={<Icon name='code' color='#ffffff' />}
               backgroundColor='#ffb300'
               buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -83,6 +94,7 @@ export default class Gallery extends Component {
                 and carries away unwanted carbon dioxide and waste products.
               </Text>
               <Button
+                onPress={this.arheart}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -91,6 +103,7 @@ export default class Gallery extends Component {
                 <Text></Text>
 
                 <Button
+                  onPress = {this.vrheart}
                   icon={<Icon name='code' color='#ffffff' />}
                   backgroundColor='#ffb300'
                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -109,6 +122,7 @@ export default class Gallery extends Component {
                     Today there are more than 300 species, or types, of shark.
                   </Text>
                   <Button
+                    onPress={this.arshark}
                     icon={<Icon name='code' color='#ffffff' />}
                     backgroundColor='#03A9F4'
                     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -117,6 +131,7 @@ export default class Gallery extends Component {
                     <Text></Text>
 
                     <Button
+                      onPress = {this.vrshark}
                       icon={<Icon name='code' color='#ffffff' />}
                       backgroundColor='#ffb300'
                       buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -133,6 +148,7 @@ export default class Gallery extends Component {
                         Scientists believe this powerful predator could eat up to 500 pounds (230 kilograms) of meat in one bite.
                       </Text>
                       <Button
+                        onPress={this.ardino}
                         icon={<Icon name='code' color='#ffffff' />}
                         backgroundColor='#03A9F4'
                         buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -141,6 +157,7 @@ export default class Gallery extends Component {
                         <Text></Text>
 
                         <Button
+                          onPress = {this.vrdino}
                           icon={<Icon name='code' color='#ffffff' />}
                           backgroundColor='#ffb300'
                           buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -165,6 +182,7 @@ export default class Gallery extends Component {
                             <Text></Text>
 
                             <Button
+                              onPress = {this.vrskeleton}
                               icon={<Icon name='code' color='#ffffff' />}
                               backgroundColor='#ffb300'
                               buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}

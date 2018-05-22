@@ -11,14 +11,14 @@ import {
   ViroVRSceneNavigator,
   ViroARSceneNavigator
 } from 'react-viro';
-import AR from './test_AR.js'
-var InitialARScene = AR
+import HelloWorldSceneAR from './Shark.js'
+var InitialARScene = HelloWorldSceneAR
 var sharedProps = {
 	apiKey:"C56CA371-C465-48F7-A0E4-EC7B0F146BCC"
 }
 
 
-export default class Test_AR extends Component{
+export default class Shark_AR extends Component{
 	constructor(){
 		super()
 		this.state = {
