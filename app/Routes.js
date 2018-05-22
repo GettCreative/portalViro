@@ -3,11 +3,11 @@ import {Router, Stack, Scene} from 'react-native-router-flux';
 
 import Login from './components/Login.js'
 import Signup from './components/Signup.js'
-import Planet_Scene from './VR_Scenes/planet_VRScene.js'
-import Dino_Scene from './VR_Scenes/diono_VRScene.js'
-// import heart_Scene from './VR_Scenes/heart_VRScene.js'
-import shark_Scene from './VR_Scenes/shark_VRScene .js'
-import skeleton_Scene from './VR_Scenes/skeleton_VRScene.js'
+import Planet_Scene from './VR_Scenes/planet/planet_VRScene.js'
+import Dino_Scene from './VR_Scenes/dino/diono_VRScene.js'
+// import heart_Scene from './VR_Scenes/hreat/heart_VRScene.js'
+import shark_Scene from './VR_Scenes/shark/shark_VRScene .js'
+import skeleton_Scene from './VR_Scenes/skeleton/skeleton_VRScene.js'
 import Gallery from './components/Gallery'
 import Test_AR from './AR_Scenes/test_ARScene.js'
 

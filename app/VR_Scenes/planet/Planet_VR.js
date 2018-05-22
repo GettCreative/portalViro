@@ -21,7 +21,7 @@ export default class VR extends Component {
   render() {
     return (
       <ViroScene>
-        <Viro360Video source={require('../images/planet.mp4')} />
+        <Viro360Video source={require('../../VR_Videos/planet.mp4')} />
       </ViroScene>
     );
   }
@@ -34,8 +34,6 @@ export default class VR extends Component {
 //     fontSize: 60,
 //     color: '#ffffff',
 //     textAlignVertical: 'center',
-//     textAlign: 'center',  
+//     textAlign: 'center',
 //   },
 // });
-
-
