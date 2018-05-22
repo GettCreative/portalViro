@@ -9,6 +9,7 @@ import Dino_Scene from './VR_Scenes/diono_VRScene.js'
 import shark_Scene from './VR_Scenes/shark_VRScene .js'
 import skeleton_Scene from './VR_Scenes/skeleton_VRScene.js'
 import Gallery from './components/Gallery'
+import Test_AR from './AR_Scenes/test_ARScene.js'
 
 export default class Routes extends React.Component {
   render(){
@@ -22,7 +23,7 @@ export default class Routes extends React.Component {
     <Scene key = "planet" component = {Planet_Scene} title = "planet"/>
     <Scene key = "dino" component = {Dino_Scene} title = "dino"/>
     <Scene key = "shark" component = {shark_Scene} title = "shark"/>
-    
+    <Scene key = "test" component = {Test_AR} title = "test"/>
     <Scene key = "skeleton" component = {skeleton_Scene} title = "skeleton"/>
     </Stack>
     </Router>

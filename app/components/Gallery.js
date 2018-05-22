@@ -38,6 +38,9 @@ export default class Gallery extends Component {
    skeleton (){
     Actions.skeleton()
   } 
+  test(){
+    Actions.test()
+  }
   render() {
     return (
       <ScrollView style={styles.Container}>
@@ -55,7 +58,7 @@ export default class Gallery extends Component {
             A collection of eight planets and their moons in orbit round the sun, together with smaller bodies in the form of asteroids, meteoroids, and comets.
           </Text>
           <Button
-            onPress={this.planet}
+            onPress={this.test}
             icon={<Icon name='code' color='#ffffff' />}
             backgroundColor='#03A9F4'
             buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
