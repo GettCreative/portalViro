@@ -25,13 +25,13 @@ export default class AR extends Component {
       <ViroARScene>
       <ViroAmbientLight color="#FFFFFF" />
       <Viro3DObject
-          source={require("../AR_objects/Skeleton.obj")}
+          source={require("../AR_objects/skeleton/Skeleton.obj")}
           highAccuracyGaze={true}
           position={[0, 0, 0]}
           scale={[2, 2, 2]}
           rotation={[45, 0, 0]}
           type="OBJ"
-          transformBehaviors={["billboard"]}/>
+        /*  transformBehaviors={["billboard"]}*//>
       </ViroARScene>
     );
   }
