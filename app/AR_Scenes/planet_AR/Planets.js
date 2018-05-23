@@ -43,9 +43,9 @@ export default class HelloWorldSceneAR extends Component {
               <Viro3DObject source={require('../../AR_objects/earth/earth.obj')}
                 resources={[require('../../AR_objects/earth/Earth_Diffuse.jpg'),
                             require('../../AR_objects/earth/EarthAna.jpg')]}
-                animation={{name:'loopRotate',
-                            run:true,
-                          loop:true}}
+                // animation={{name:'loopRotate',
+                //             run:true,
+                //           loop:true}}
                     type="OBJ"/>
 
             </ViroPortal>
