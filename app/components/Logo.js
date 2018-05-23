@@ -12,7 +12,7 @@ export default class Logo extends React.Component {
       <View style = {styles.container} >
         <Image
           style={{width: 40, height: 80}}
-          source = {require('../images/Origin_Portal.gif')} />
+          source = {require('../images/Logo.gif')} />
 
           <Text style = {styles.logoText}>PORTAL</Text>
         </View>

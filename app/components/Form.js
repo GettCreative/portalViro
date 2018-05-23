@@ -75,15 +75,19 @@ const styles = StyleSheet.create({
   },
 
   inputBox: {
-    width: 300,
-    backgroundColor: 'rgba(255,255,255,0.3)',
-    paddingHorizontal: 35,
-    color: '#ffffff',
-    marginVertical: 15
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: 250,
+    height: 40,
+    borderBottomColor: '#00e5ff',
+    borderBottomWidth: 1,
+    paddingBottom: 5,
+    color: '#fff',
+    marginBottom: 30
   },
 
   button: {
-    width: 300,
+    width: 250,
     backgroundColor: '#1E88E5',
     marginVertical: 15,
     paddingVertical: 12
