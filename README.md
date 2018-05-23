@@ -1,21 +1,19 @@
 # portalViro
-> Mechanic On A Click
+> Enhance your learning experience
 
 ## Team
 
-  - __Product Owner__:
+  - __Product Owner__:Salsabeel Jaafreh
   - __Scrum Master__: Nader Nasr
   - __Development Team Members__:Nooreddein Yousef , Mohammad AL_Rifai
 
 ## Table of Contents
-
-1. [Usage](#Usage)
+1. [Team](#team)
 1. [Requirements](#requirements)
 1. [Development](#development)
     1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
+
+
 
 ## How to start the app
 
