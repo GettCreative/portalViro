@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-import {StyleSheet} from 'react-native';
+import {StyleSheet,View} from 'react-native';
 
 import {
   ViroSceneNavigator,
@@ -16,8 +16,10 @@ import {
   ViroPortalScene,
   Viro3DObject,
   ViroARPlaneSelector,
-  ViroAnimations
+  ViroAnimations,
+  ViroButton
 } from 'react-viro';
+import {Actions} from 'react-native-router-flux';
 
 export default class HelloWorldSceneAR extends Component {
   constructor() {
@@ -31,7 +33,9 @@ export default class HelloWorldSceneAR extends Component {
     // bind 'this' to functions
     this._onInitialized = this._onInitialized.bind(this);
   }
-
+onTap (){
+  Actions.gal()
+}
   render() {
     return (
     <ViroARScene>
@@ -43,14 +47,19 @@ export default class HelloWorldSceneAR extends Component {
               <Viro3DObject source={require('../../AR_objects/earth/earth.obj')}
                 resources={[require('../../AR_objects/earth/Earth_Diffuse.jpg'),
                             require('../../AR_objects/earth/EarthAna.jpg')]}
-                animation={{name:'loopRotate',
-                            run:true,
-                          loop:true}}
                     type="OBJ"/>
 
             </ViroPortal>
               </ViroPortalScene>
+              <ViroButton
+              source={require("../../images/button.png")}
+              height={2}
+              width={3}
+              position={[1, 3, -5]}
+              onClick={this.onTap}
+              />
             </ViroARScene>
+
     );
   }
 
