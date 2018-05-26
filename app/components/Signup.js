@@ -64,6 +64,10 @@ export default class Signup extends React.Component {
 
       <View style = {styles.container}>
         <Logo />
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+
 
         <TextInput
           onChangeText={(name) => this.setState({name})}
@@ -156,7 +160,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: 250,
     height: 40,
-    borderBottomColor: '#00e5ff',
+    borderBottomColor: '#1E88E5',
     borderBottomWidth: 1,
     paddingBottom: 5,
     color: '#fff',

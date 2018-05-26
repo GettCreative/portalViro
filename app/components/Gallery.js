@@ -56,7 +56,7 @@ ardino(){
 
 
         <Header
-          centerComponent={{ text: 'Welcome To Portal', style: { color: '#fff' } }}
+          centerComponent={{ text: 'ENHANCE YOUR LEARNING EXPERIENCE', style: { color: '#fff', fontSize: 18, alignSelf: 'center' } }}
         />
 
 
