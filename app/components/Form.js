@@ -17,20 +17,29 @@ export default class SignUp extends React.Component {
   }
   login(){
     var that = this
-
-    fetch('http://192.168.1.157:3000/login', {
+    if(this.state.email.length && this.state.password.length !==0){
+    fetch('http://192.168.0.85:3000/login', {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         password:that.state.password,
         email:that.state.email
       }),
-    });
-    Actions.gal()
+    }).then((responsedata) => {
+        if(responsedata.status === 200){
+
+          alert('Signedin Successfully')
+          Actions.gal()
+        }else{
+          alert("something error")
+        }
+    })
   }
+  else{alert("plz fill all info")}
+}
 
 
   render (){
