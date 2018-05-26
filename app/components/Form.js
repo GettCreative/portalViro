@@ -17,20 +17,29 @@ export default class SignUp extends React.Component {
   }
   login(){
     var that = this
-
-    fetch('http://192.168.1.157:3000/login', {
+    if(this.state.email.length && this.state.password.length !==0){
+    fetch('http://192.168.1.115:3000/login', {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         password:that.state.password,
         email:that.state.email
       }),
-    });
-    Actions.gal()
+    }).then((responsedata) => {
+        if(responsedata.status === 200){
+
+          alert('Signedin Successfully')
+          Actions.gal()
+        }else{
+          alert("something error")
+        }
+    })
   }
+  else{alert("plz fill all info")}
+}
 
 
   render (){
@@ -75,19 +84,15 @@ const styles = StyleSheet.create({
   },
 
   inputBox: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    width: 250,
-    height: 40,
-    borderBottomColor: '#00e5ff',
-    borderBottomWidth: 1,
-    paddingBottom: 5,
-    color: '#fff',
-    marginBottom: 30
+    width: 300,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    paddingHorizontal: 35,
+    color: '#ffffff',
+    marginVertical: 15
   },
 
   button: {
-    width: 250,
+    width: 300,
     backgroundColor: '#1E88E5',
     marginVertical: 15,
     paddingVertical: 12
