@@ -8,6 +8,7 @@ import {
 //Imports
 import Routes from './app/Routes'
 import Gallery from './app/components/Gallery'
+//import Test from './app/components/SignInTest'
 
 
 
