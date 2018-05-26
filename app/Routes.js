@@ -26,7 +26,7 @@ export default class Routes extends React.Component {
           <Scene key = "login" component = {Login} title="Login" />
           <Scene key = "gal" component = {Gallery} title="gal" />
           <Scene key = "signup" component = {Signup} title="Signup" initial = {true}/>
-          <Scene key = "vrplanet" component = {Planet_Scene} title = "vrplanet"/>
+          <Scene key = "vrplanet" component = {Planet_Scene} title = "vrplanet" back={true}/>
           <Scene key = "vrdino" component = {Dino_Scene} title = "vrdino"/>
           <Scene key = "vrshark" component = {shark_Scene} title = "vrshark"/>
           <Scene key = "arshark" component = {Shark_AR} title = "arshark"/>
